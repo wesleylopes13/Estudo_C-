@@ -7,9 +7,34 @@ namespace EstoqueTV
 {
     class Produto
     {
-        public String Nome;
-        public double Valor;
-        public int Qtd;
+        public String nome { get; set; }
+        public double valor { get; set; }
+        public int qtd { get; set; }
+
+        public Produto(String nome, double valor, int qtd) 
+        {
+            this.nome = nome;
+            this.valor = valor;
+            this.qtd = qtd;
+        }
+        
+        public String Nome
+        {
+            get { return nome; }
+            set { nome = value; }
+        }
+
+        public double Valor
+        {
+            get { return valor; }
+            set { valor = value; }
+        }
+
+        public int Qtd
+        {
+            get { return qtd; }
+            set { qtd = value; }
+        }
 
         public double ValorTotalEmEstoque()
         {

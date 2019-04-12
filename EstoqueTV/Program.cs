@@ -10,19 +10,21 @@ namespace EstoqueTV
             // Instanciando Classe Produto
 
             Produto prod;
-            prod = new Produto();
+            
 
             // Inserindo dados do produto
 
             Console.Write("Digito o produto: ");
-            prod.Nome = Console.ReadLine();
+            String nome = Console.ReadLine();
 
             Console.Write("\nDigite o preço do produto: ");
-            prod.Valor = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double valor = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             Console.Write("\nDigite a quantidade de produtos no estoque: ");
-            prod.Qtd = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            int qtd = int.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
+
+            prod = new Produto(nome, valor, qtd);
             // Exibindo os dados cadastrados
             prod.Exibir();
             
